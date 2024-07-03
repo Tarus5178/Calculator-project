@@ -1,119 +1,88 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-body, button {
-    color: #b3f2ff;
-    font-family: "Courier Prime", monospace;
-    background-color: #21303e;
-}
-
-body {
-    font-size: 48px;
-    height: 100vh;
+body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100vh;
+    gap: 30px;
+    background-color: rgb(214, 214, 214);
 }
 
-#calc-wrapper {
-    box-sizing: content-box;
-    flex: none;
-    width: 75vmin;
-    height: 72vmin;
-    padding: 5vmin;
-    background-color: #21303e;
+.calculatorWrap{
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.829);
+    box-shadow: 1px 1px 6px 0px #646566;
 }
 
-#display {
+.display{
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+    border: 1px solid rgb(158, 183, 229);
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    border: 2px #b3f2ff solid;
-    height: 12vmin;
-    font-size: 9vmin;
-    padding-top: 1vmin;
-    padding-right: 3vmin;
-}
-
-#button-wrapper {
-    margin-top: 3vmin;
-    display: flex;
-}
-
-#number-wrapper {
-    flex: none;
-    width: 45vmin;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3vmin;
-}
-
-#control-wrapper {
-    flex: none;
-    width: 30vmin;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 3vmin;
+    padding-right: 20px;
+    font-size: 40px;
+    color: white;
 }
 
-button {
-    border-style: solid;
-    border-color: #b3f2ff;
-    font-size: 6vmin;
-    width: 12vmin;
-    height: 12vmin;
-    flex: none;
+.contents{
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contents button{
+    padding: 25px 40px;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
+    background-color: rgb(78, 78, 78);
+    color: white;
 }
 
-button#clear {
-    border-radius: 50%;
+.contents .operatorKeys{
+    background-color: rgb(101, 101, 101);
+    transition: 0.25s;
 }
 
-button#sign {
-    font-size: 4vmin;
-    font-family: 'Courier';
-    font-weight: 700;
+.contents .clearKey{
+    background-color: rgb(245, 75, 75);
 }
 
-button:hover {
-    background-color: #2f3d4a;
+.contents .clearKey:active{
+    background-color: rgba(245, 75, 75, 0.689);
 }
 
-button:active,
-button.glowing {
-    box-shadow: 0px 0px 10px;
-    transform: scale(.98);
-    background-color: #4b6073;
+.contents .num:active{
+    background-color: rgba(78, 78, 78, 0.6);
 }
 
-button.glow-pink:active,
-button.glowing-pink {
-    color: #FFDBD1;
-    border-color: #FFDBD1;
-    background-color: #7a6863;
+.contents .plus{
+    grid-row: 2 / 4;
+    grid-column: 4 / 5;
 }
 
-button.glow-yellow:active,
-button.glowing-yellow {
-    color: #FFFAD1;
-    border-color: #FFFAD1;
-    background-color: #77755e;
+.contents .operatorKeys:active{
+    background-color: rgb(162, 162, 162);
 }
 
-button.double {
-    width: 27vmin;
-}
-
-button:disabled,
-button.glow-pink:disabled,
-button.glow-yellow:disabled {
-    box-shadow: none;
-    background-color: #21303e;
-    border-color: #4b6073;
-    color: #4b6073;
+.contents .equalsSign{
+    background-color: rgba(0, 128, 255, 0.658);
+    grid-column: 2 / 5;
 }
