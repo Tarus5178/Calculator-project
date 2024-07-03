@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, button {
+    color: #b3f2ff;
+    font-family: "Courier Prime", monospace;
+    background-color: #21303e;
+}
+
+body {
+    font-size: 48px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calc-wrapper {
+    box-sizing: content-box;
+    flex: none;
+    width: 75vmin;
+    height: 72vmin;
+    padding: 5vmin;
+    background-color: #21303e;
+}
+
+#display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 2px #b3f2ff solid;
+    height: 12vmin;
+    font-size: 9vmin;
+    padding-top: 1vmin;
+    padding-right: 3vmin;
+}
+
+#button-wrapper {
+    margin-top: 3vmin;
+    display: flex;
+}
+
+#number-wrapper {
+    flex: none;
+    width: 45vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vmin;
+}
+
+#control-wrapper {
+    flex: none;
+    width: 30vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 3vmin;
+}
+
+button {
+    border-style: solid;
+    border-color: #b3f2ff;
+    font-size: 6vmin;
+    width: 12vmin;
+    height: 12vmin;
+    flex: none;
+    cursor: pointer;
+}
+
+button#clear {
+    border-radius: 50%;
+}
+
+button#sign {
+    font-size: 4vmin;
+    font-family: 'Courier';
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: #2f3d4a;
+}
+
+button:active,
+button.glowing {
+    box-shadow: 0px 0px 10px;
+    transform: scale(.98);
+    background-color: #4b6073;
+}
+
+button.glow-pink:active,
+button.glowing-pink {
+    color: #FFDBD1;
+    border-color: #FFDBD1;
+    background-color: #7a6863;
+}
+
+button.glow-yellow:active,
+button.glowing-yellow {
+    color: #FFFAD1;
+    border-color: #FFFAD1;
+    background-color: #77755e;
+}
+
+button.double {
+    width: 27vmin;
+}
+
+button:disabled,
+button.glow-pink:disabled,
+button.glow-yellow:disabled {
+    box-shadow: none;
+    background-color: #21303e;
+    border-color: #4b6073;
+    color: #4b6073;
+}
